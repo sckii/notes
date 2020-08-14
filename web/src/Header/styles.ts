@@ -45,11 +45,11 @@ export const AddNote = styled.span`
   flex-direction: column;
   position: absolute;
   top: 8rem;
-  right: 6.4rem;
+  right: 5rem;
   z-index: 100;
-  padding: 2rem;
+  padding: 3rem;
   color: white;
-  background: ${props => props.theme.colors.primary};
+  background: ${props => props.theme.colors.secondary};
   border-radius: 1.4rem;
   box-shadow: 0px 0px 10px black;
   
@@ -65,17 +65,24 @@ export const AddNote = styled.span`
     color: black;
     border: 0;
     height: 6rem;
-    width: 100%;
+    width: fit-content;
+    outline: 0;
+    transition: all 0.2s;
+    &:hover {
+      transform: scale(1.2)
+    }
     img {
       width: 4rem;
     }
+  
   }
   textarea {
+    outline: 0;
     border: 0;
+    border-left: 3px solid  ${props => props.theme.colors.primaryDark};
     background: ${props => props.theme.colors.secondary};
     text-align: justify;
     padding: 2rem;
-    border-radius: 1rem;
     font-size: 3.4rem;
     resize: none;
     color: white;

@@ -5,16 +5,18 @@ import DeleteIcon from '../assets/svg/trash-outline.svg'
 import axios from 'axios'
 
 function PagePost() {
+
   const [data, setData] = useState([])
-  const [boxId, setBoxId] = useState()
+  const [boxId, setBoxId] = useState(0)
   console.log(boxId)
 
-  function handleClick(id: number) {
-    axios.delete(`http://localhost:3004/text/${id}`)
+  async function handleClick(id: number) {
+    await axios.delete(`http://192.168.1.106:3004/text/${id}`)
+    setBoxId(id);
   }
   
   useEffect(() => {
-    axios.get('http://localhost:3004/text')
+    axios.get('http://192.168.1.106:3004/text')
       .then(res => {
         const dataBase = res.data
         return setData(dataBase)
@@ -27,7 +29,7 @@ function PagePost() {
       { data.map((title: any, id: number) => {
         return (
           <PostBoxes key={title.id} >
-              <DeleteButton  onClick={() => {setBoxId(title.id); handleClick(title.id)} } ><img src={DeleteIcon} alt=""/></DeleteButton>
+              <DeleteButton  onClick={() => { handleClick(title.id)} } ><img src={DeleteIcon} alt=""/></DeleteButton>
             <Text>  
               {title.title}
             </Text>
