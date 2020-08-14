@@ -28,7 +28,7 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
       return setValue(!value)
     }
     
-    await axios.post('http://192.168.1.106:3004//text', {
+    await axios.post('http://localhost:3004/text', {
       title: card
     })
       .then(res => {
