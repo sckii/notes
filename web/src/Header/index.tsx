@@ -29,8 +29,13 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
       return setValue(!value)
     }
     
+<<<<<<< HEAD
     await axios.post('http://localhost:3333/textAdd', {
       "text": card
+=======
+    await axios.post('http://localhost:3004/text', {
+      title: card
+>>>>>>> master
     })
       .then(res => {
         console.log(res)
