@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react'
+import { uuid } from 'uuidv4';
 
 import axios from 'axios'
 
@@ -28,8 +29,8 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
       return setValue(!value)
     }
     
-    await axios.post('http://localhost:3004/text', {
-      title: card
+    await axios.post('http://localhost:3333/textAdd', {
+      "text": card
     })
       .then(res => {
         console.log(res)

@@ -35,7 +35,8 @@ export const Text = styled.div`
     background-color: ${props => props.theme.colors.secondary};
 
   }
-  overflow-Y: auto;
+  overflow-y: auto;
+  
   padding-right: 1.5rem;
 `
 

@@ -11,12 +11,12 @@ function PagePost() {
   console.log(boxId)
 
   async function handleClick(id: number) {
-    await axios.delete(`http://localhost:3004/text/${id}`)
+    await axios.delete(`http://localhost:3333/textDelete/${id}`)
     setBoxId(id);
   }
   
   useEffect(() => {
-    axios.get('http://localhost:3004/text')
+    axios.get('http://localhost:3333/texts')
       .then(res => {
         const dataBase = res.data
         return setData(dataBase)
@@ -26,12 +26,12 @@ function PagePost() {
   return (
     <PostContainer>
 
-      { data.map((title: any, id: number) => {
+      { data.map((title: any) => {
         return (
-          <PostBoxes key={title.id} >
-              <DeleteButton  onClick={() => { handleClick(title.id)} } ><img src={DeleteIcon} alt=""/></DeleteButton>
+          <PostBoxes key={title.text_id} >
+              <DeleteButton  onClick={() => { handleClick(title.text_id)} } ><img src={DeleteIcon} alt=""/></DeleteButton>
             <Text>  
-              {title.title}
+              {title.text}
             </Text>
           </PostBoxes>
         )
