@@ -1,9 +1,13 @@
 # Notes
 
-## Web version 
+## Light mode
+----
 
-![image](/prints/home.png?raw=false)
-![image](/prints/homepopup.png?raw=true)
-![image](/prints/deletebutton.png?raw=true)
-![image](/prints/darkmobile.png?raw=true)
-![image](/prints/addnotedark.png?raw=true)
+<img src="prints/home.png" width=50%><img src="prints/homepopup.png" width=50%>
+
+
+## Dark mode
+----
+
+<img src="prints/darkmobile.png" width=20%><img src="prints/addnotedark.png" width=20%>
+
