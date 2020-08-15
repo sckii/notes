@@ -11,20 +11,12 @@ function PagePost() {
   console.log(boxId)
 
   async function handleClick(id: number) {
-<<<<<<< HEAD
     await axios.delete(`http://localhost:3333/textDelete/${id}`)
-=======
-    await axios.delete(`http://localhost:3004/text/${id}`)
->>>>>>> master
     setBoxId(id);
   }
   
   useEffect(() => {
-<<<<<<< HEAD
     axios.get('http://localhost:3333/texts')
-=======
-    axios.get('http://localhost:3004/text')
->>>>>>> master
       .then(res => {
         const dataBase = res.data
         return setData(dataBase)
