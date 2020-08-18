@@ -8,7 +8,7 @@
 
 ## Used
 
-* [PostgreSQL]()<br>
-* [ReactJS]()<br>
-* [Styled-components]()<br>
-* [Typescript]()<br>
+* [PostgreSQL](https://www.postgresql.org/)<br>
+* [ReactJS](https://pt-br.reactjs.org/)<br>
+* [Styled-components](https://styled-components.com/)<br>
+* [Typescript](https://www.typescriptlang.org/)<br>
