@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { PostContainer, PostBoxes, Text, DeleteButton } from './styles'
 
-import DeleteIcon from '../assets/svg/trash-outline.svg'
+import DeleteIcon from '../../assets/svg/trash-outline.svg'
 import axios from 'axios'
 
 function PagePost() {

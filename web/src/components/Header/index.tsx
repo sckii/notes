@@ -1,14 +1,14 @@
 import React, { useContext, useState } from 'react'
-import { uuid } from 'uuidv4';
 
 import axios from 'axios'
 
 import Switch from 'react-switch'
 import { ThemeContext } from 'styled-components'
 
-import addIcon from '../assets/svg/add-circle-outline.svg'
+import addIcon from '../../assets/svg/add-circle-outline.svg'
 
 import { HeaderContainer, Button, Buttons, AddNote } from './styles'
+
 
 interface Props {
   toggleTheme(): void,
@@ -18,7 +18,6 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
   const { colors, title } = useContext(ThemeContext)
   const [value, setValue] = useState(false)
   const [card, setCard] = useState('')
-
 
   function openAddNote() {
     setValue(!value)
@@ -41,9 +40,9 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
     <HeaderContainer>
       <h1>Notes</h1>
       <Buttons>
-        <>  
+        <>
           <Button onClick={ openAddNote }> 
-            <img src={addIcon} alt=""/> Note
+            <img src={addIcon} alt=""/>Note
           </Button>
           { value === true ? 
             <AddNote> 
@@ -52,9 +51,9 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
                   name='add card'
                   value={card}
                   onChange={(e) => { setCard(e.target.value) }} 
-
-                > </textarea> 
+                />
                 <button type="submit" > <img src={addIcon} alt=""/> </button>
+
               </form>
             </AddNote> : <> </>}
         </>

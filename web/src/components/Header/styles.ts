@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const HeaderContainer = styled.div`
   padding: 0 4rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
   height: 10rem;
@@ -16,6 +16,7 @@ export const HeaderContainer = styled.div`
 `
 
 export const Button = styled.a`
+  margin-right: 1rem;
   display: flex;
   align-items: center;
   img{
@@ -35,7 +36,7 @@ export const Buttons = styled.div`
   width: 16rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 `
 
 export const AddNote = styled.span`
@@ -62,7 +63,7 @@ export const AddNote = styled.span`
     border-radius: 50%;
     margin-top: 1.7rem;
     border-radius: 0.5rem;
-    color: black;
+    color: white;
     border: 0;
     height: 6rem;
     width: fit-content;

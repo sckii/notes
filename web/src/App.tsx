@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { ThemeProvider, DefaultTheme } from 'styled-components'
 
 import usePersistedState from './utils/usePersistedState'
@@ -10,8 +10,8 @@ import dark from './styles/themes/dark'
 
 import { PageContainer } from './styles';
 
-import Header from './Header';
-import PagePost from './PagePosts';
+import Header from './components/Header';
+import PagePost from './components/PagePosts';
 
 import GlobalStyle from './styles/global'
 
